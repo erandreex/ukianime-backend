@@ -1,0 +1,130 @@
+form {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.imputs-layout {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 25px;
+    width: 100%;
+}
+
+.group {
+    position: relative;
+    flex-grow: 1;
+   }
+
+   .input {
+    padding: 10px 10px 10px 5px;
+    border: none;
+    border-bottom: 1px solid #515151;
+    background: transparent;
+    color: var(--text-color);
+    font-size: var(--name-size);
+    width: 100%;
+
+   }
+
+   .input:focus {
+    outline: none;
+   }
+
+
+span {
+    color: var(--text-color);
+}
+   label {
+    color: var(--text-color);
+    font-weight: normal;
+    position: absolute;
+    pointer-events: none;
+    left: 5px;
+    top: 10px;
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+   }
+
+   .input:focus ~ label,
+   .input:valid ~ label {
+    top: -10px;
+    font-size: 14px;
+    color: var(--first-color);
+   }
+
+   .bar {
+    position: relative;
+    display: block;
+    width: 100%;
+
+   }
+
+   .bar:before, .bar:after {
+    content: '';
+    height: 2px;
+    width: 0;
+    bottom: 1px;
+    position: absolute;
+    background: var(--first-color);
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+   }
+
+   .bar:before {
+    left: 50%;
+   }
+
+   .bar:after {
+    right: 50%;
+   }
+
+   .input:focus ~ .bar:before, .input:focus ~ .bar:after {
+    width: 50%;
+   }
+
+
+
+   button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    background: var(--first-color);
+    border: none;
+    height: 3rem;
+    width: 100%;
+    font-size: var(--name-size);
+    font-weight: 550;
+    cursor: pointer;
+    color: var(--text-color);
+}
+
+.errors {
+    margin-top: 40px;
+    background-color: var(--error-bg-color);
+    color: var(--text-color);
+    padding: 10px;
+    border-radius: var(--border-radius);
+}
+
+.errors ul {
+    margin: 5px;
+}
+
+
+.exito {
+    margin-top: 40px;
+    padding: 10px;
+    background-color: var(--exito-bg-color);
+    border-radius: var(--border-radius);
+    color: var(--text-color);
+}
+
+.exito p {
+    margin: 5px 0px;
+}

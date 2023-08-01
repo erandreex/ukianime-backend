@@ -1,0 +1,28 @@
+.loader {
+    align-self: center;
+
+    border-width: 5px;
+    border-style: solid;
+    border-color: var(--text-color);
+
+    border-top-width: 5px;
+    border-top-style: solid;
+    border-top-color: var(--first-color);
+
+    border-radius: 50%;
+
+    width: 30px;
+    height: 30px;
+    -webkit-animation: spin 1s linear infinite;
+    animation: spin 1s linear infinite;
+}
+
+@-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
